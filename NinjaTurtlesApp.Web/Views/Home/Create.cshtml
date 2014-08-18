@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create A New Character</h2>
+
+<form class="form-group" action="/Home/Create/" method="post">
+    <input type="text" name="name" placeholder="Name" class="input-group-sm">
+    <input type="text" name="color" placeholder="Color" class="input-group-sm" />
+    <input type="text" name="weapons" placeholder="Weapons" class="input-group-sm" />
+    <input type="text" name="personality" placeholder="Personality" class="input-group-sm" />
+    <br />
+    <input type="text" name="description" placeholder="Character Description" class="input-group-lg" />
+    <br />
+    <input type="text" name="pictureSm" placeholder="Small PictureURL" class="input-group-sm" />
+    <input type="text" name="pictureLg" placeholder="Large PictureURL" class="input-group-sm" />
+    <br />
+    <input type="submit" class="btn btn-primary" />
+</form>

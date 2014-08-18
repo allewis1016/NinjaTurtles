@@ -1,0 +1,22 @@
+﻿@model NinjaTurtlesApp.Data.Models.NinjaTurtle
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form class="form-group" action="/Home/Edit/@Model.Id" method="post">
+    <input type="text" name="name" placeholder="Name" value="@Model.Name" class="input-group-sm">
+    <input type="text" name="color" placeholder="Color" value="@Model.Color" class="input-group-sm" />
+    <input type="text" name="weapons" placeholder="Weapons" value="@Model.Weapons" class="input-group-sm" />
+    <input type="text" name="personality" placeholder="Personality" value="@Model.Personality" class="input-group-sm" />
+    <br />
+    <input type="text" name="descritpion" placeholder="Description" value="@Model.Description" class="input-group-lg" />
+    <br />
+    <input type="text" name="pictureSm" placeholder="Small PhotoURL" value="@Model.PictureSm" class="input-group-sm" />
+    <input type="text" name="pictureLg" placeholder="Large PhotoURL" value="@Model.PictureLg" class="input-group-sm" />
+    <br />
+    <input type="submit" class="btn btn-primary" />
+</form>
+
+<a href="/Home/Delete/@Model.Id" class="btn btn-danger">Delete Character</a>

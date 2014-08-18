@@ -1,0 +1,15 @@
+﻿@model NinjaTurtlesApp.Data.Models.NinjaTurtle
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<h2>@Model.Name</h2>
+<img src="@Model.PictureLg" height="500" width="350" />
+<p><b>Color:</b> @Model.Color</p>
+<p><b>Weapons:</b> @Model.Weapons</p>
+<p><b>Personality:</b> @Model.Personality</p>
+<p><b>Description:</b> @Model.Description</p>
+<a href="/Home/Edit/@Model.Id" class="btn btn-primary">Edit details</a>
+

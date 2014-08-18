@@ -1,0 +1,26 @@
+﻿@model List<NinjaTurtlesApp.Data.Models.NinjaTurtle>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+ <img class="centered" src="/images/TMNTLog.jpg" width="1140" height="180">
+<div class=" jumbotron">
+                    <h1 style="color:red;font-family:cursive;text-align:center;">The Turtles</h1>
+    <p class="lead">The Teenage Mutant Ninja Turtles are a fictional team of four teenage turtles, who happen to be brothers.  They are named after Renaissance artists and trained by a Sensai rat, named Master Splinter.  They all live in the sewers of New York City and rid the city of crime created by the evil Shredder and the footclan.</p>
+    <div style="width: 560px; height: 340px; margin: 0 auto;">
+        <iframe width="560" height="315" src="//www.youtube.com/embed/Xgn8TebH2IY?rel=0&autoplay=1" frameborder="0"></iframe></div>
+    </div>
+<div class="row well-lg centered">
+    @foreach (var NinjaTurtle in Model)
+    {
+        <div class="col-md-6 well-lg centered">
+            <a class="char" href="/Home/Details/@NinjaTurtle.Id">
+                <h2>@NinjaTurtle.Name</h2>
+                <img src="@NinjaTurtle.PictureSm" width="175" height="175" />
+            </a>
+        </div>
+    }
+</div>
+    <div>
+        <a href="/Home/Create/" class="btn btn-block btn-primary btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Add Turtle/Character</a>
+    </div>
